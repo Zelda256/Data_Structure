@@ -9,8 +9,8 @@
 
 typedef int Status;
 typedef int ElemType;
-typedef ElemType *Triplet;  //ÓÉInitTriplet·ÖÅä3¸öÔªËØ¿Õ¼ä
-/*******************************ÉùÃ÷²¿·Ö****************************************/
+typedef ElemType *Triplet;  //ç”±InitTripletåˆ†é…3ä¸ªå…ƒç´ ç©ºé—´
+/*******************************å£°æ˜éƒ¨åˆ†****************************************/
 
 Status InitTriplet (Triplet *T,ElemType v1,ElemType v2,ElemType v3);
 Status DestroyTriplet(Triplet *T);
@@ -21,7 +21,7 @@ Status IsDescending(Triplet T);
 Status Max(Triplet T,ElemType *e);
 Status Min(Triplet T,ElemType *e);
 
-/*******************************º¯Êı²¿·Ö****************************************/
+/*******************************å‡½æ•°éƒ¨åˆ†****************************************/
 
 Status InitTriplet (Triplet *T,ElemType v1,ElemType v2,ElemType v3)
 {
@@ -72,7 +72,7 @@ Status Min(Triplet T,ElemType *e)
     return OK;
 }
 
-/*******************************Ö÷º¯Êı²¿·Ö**************************************/
+/*******************************ä¸»å‡½æ•°éƒ¨åˆ†**************************************/
 
 int main()
 {
@@ -82,18 +82,18 @@ int main()
     InitTriplet(&T,v1,v2,v3);
 
     Get(T,2,&e);
-    printf("\nGet()È¡³öTÖĞµÄµÚ¶ş¸öÔªËØÎª£º%d\n",e);
+    printf("\nGet()å–å‡ºTä¸­çš„ç¬¬äºŒä¸ªå…ƒç´ ä¸ºï¼š%d\n",e);
 
-    printf("\nÏÖ½«µÚ¶ş¸öÔªËØÖÃÎª£º9\n");
+    printf("\nç°å°†ç¬¬äºŒä¸ªå…ƒç´ ç½®ä¸ºï¼š9\n");
     Put(&T,2,e1);
     Get(T,2,&e);
-    printf("Get()È¡³öTÖĞµÄµÚ¶ş¸öÔªËØÎª£º%d\n",e);
+    printf("Get()å–å‡ºTä¸­çš„ç¬¬äºŒä¸ªå…ƒç´ ä¸ºï¼š%d\n",e);
 
     Max(T,&e);
-    printf("\nÈıÔª×éTÖĞ×î´óµÄÔªËØÎª£º%d\n",e);
+    printf("\nä¸‰å…ƒç»„Tä¸­æœ€å¤§çš„å…ƒç´ ä¸ºï¼š%d\n",e);
 
     Min(T,&e);
-    printf("\nÈıÔª×éTÖĞ×îĞ¡µÄÔªËØÎª£º%d\n",e);
+    printf("\nä¸‰å…ƒç»„Tä¸­æœ€å°çš„å…ƒç´ ä¸ºï¼š%d\n",e);
 
     DestroyTriplet(&T);
     return 0;
